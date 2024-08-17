@@ -1,0 +1,11 @@
+services:
+  app:
+    restart: always
+    container_name: trading_economics
+    build: .
+    volumes: 
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - '0.0.0.0:3001:3000'

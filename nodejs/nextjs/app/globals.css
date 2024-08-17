@@ -1,0 +1,106 @@
+@import url("bootstrap/dist/css/bootstrap.min.css");
+
+.graph-container {
+  font-size: 12px;
+  font-weight: 100;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom-left-radius: var(--bs-border-radius);
+  border-bottom-right-radius: var(--bs-border-radius);
+}
+.canvas-container {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 95%;
+}
+
+.canvas-container > canvas {
+  width: 100%;
+  height: 700px;
+}
+
+.price-table {
+  padding-top: 50px;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+.price-table > div {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  justify-content: center;
+}
+
+.date-table {
+  width: 95%; 
+  display: flex;
+  justify-content: space-between;
+  container-type: inline-size;
+  container-name: date-table-content;
+}
+
+@container date-table-content (width < 1200px) {
+  .single:nth-child(even):not(:last-child, :first-child) {
+    display: none;
+  }
+}
+
+@container date-table-content (width < 800px) {
+  .single:nth-child(3n+1):not(:last-child, :first-child) {
+    display: none;
+  }
+}
+
+@container date-table-content (width < 500px) {
+  .single:nth-child(3n+2):not(:last-child, :first-child) {
+    display: none;
+  }
+}
+
+.date-table > .single {
+  text-align: center;
+  padding: 5px 0;
+  align-items: center;
+}
+
+.selected > div {
+  font-size: 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.single-line-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-line-form > .alert {
+  display: none;
+}
+
+.single-line-form > * {
+  border-radius: 0;
+}
+
+.single-line-form > * {
+  margin-right: -1px;
+}
+
+.single-line-form > *:last-child {
+  border-top-right-radius: var(--bs-border-radius);
+  /* border-bottom-right-radius: var(--bs-border-radius); */
+}
+
+.single-line-form > *:first-child {
+  border-top-left-radius: var(--bs-border-radius);
+  /* border-bottom-left-radius: var(--bs-border-radius); */
+}
+
+.single-line-form .mb-2 {
+  margin-bottom: 0 !important;
+}
+
